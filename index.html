@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Responsive Navbar with Search Box | CodingNepal</title> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <title>Promotion Pays |Customer Apparel|Custom hats|T shirt printing</title>
+  </head>
+  <body>
+    <nav>
+      <div class="menu-icon">
+<span class="fas fa-bars"></span></div>
+<div>
+<img src="Images/prompaylogo.gif" alt="logo" class="logoim"></div>
+<div class="nav-items">
+<li><a href="#">Home</a></li>
+<li><a href="http://www.promotionpay.com/php/About%20us.php">About</a></li>
+<li><a href="http://www.promotionpay.com/php/t-shirt%20basic.php">Apparel</a></li>
+<li><a href="http://www.promotionpay.com/php/Aprons.php">Promotional</a></li>
+<li><a href="http://www.promotionpay.com/php/Contact.php">Contact</a></li>
+</div>
+<div class="search-icon">
+<span class="fas fa-search"></span></div>
+<div class="cancel-icon">
+<span class="fas fa-times"></span></div>
+<form action="#">
+        <input type="search" class="search-data" placeholder="Search" required>
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+</nav>
+
+<div>
+    <img id="slider" src="Images/slideimage1.jpg" />
+ 
+</div>
+
+
+<div class="details">
+
+  <div class="card">
+    <i class="fas fa-clock fa-3x" style="color:deeppink;"></i>
+  <h3 style="color: orange;"> FREE 24HRS RUSH SERVICE! </h3> 
+On any t-shirts and tote bags order.
+<br>
+<span style="color:lightgreen;">
+Send us your rush order and we'll have it completed and shipped to you in 24hrs guarantee!
+</span> 
+</div>
+  
+  <div class="card">
+    <i class="fas fa-truck fa-3x"  style="color: orange;" ></i>
+    <h3 style="color: orange;">  FREE SHIPPING IN AROUND CANADA!</h3>
+    <br><br>
+    <span style="color: deeppink;">
+    On Order over 225pcs
+  </span>
+     <p style="color:greenyellow">
+      For More Details Call <br>
+      <a href="tel:1-888 503-3526">
+      <i class="fas fa-phone-alt fa-2x" style="color: orangered;"></i> 
+      </a>
+     </p>
+  </div>
+
+  <div class="card">
+    <i class="fas fa-money-check-alt fa-3x" style="color: royalblue;"></i>
+  
+  <h3 style="color: orange;"> UNBEATABLE PRICE GUARANTEE </h3> <br><br>
+  <p style="color:lightgreen;"> We won't just match it, we'll beat it! If you find a lower price than what we have quoted, we'll beat it by 5%
+  </p>
+  </div>
+</div>
+
+
+<h2 class="info">Top Trending Products</h2>
+<p class="pinfo">
+These products are our current 
+best sellers and have rave reviews from our customers. 
+We think you'll like them too
+</p>
+
+<div class="details">
+  <div class="productCard">
+    <br>
+    <img src="Images/BrownToque.jpeg" alt="redjacket" id="imjs1" class="product">
+    
+    <div class="colorCircle">
+      <div class="circle1" onclick="ToqueChanger('BrownToque')"></div>
+      <div class="circle2" onclick="ToqueChanger('BlueToque')"></div>
+      <div class="circle3" onclick="ToqueChanger('BlackToque')"></div>
+    </div>
+
+  </div>
+
+  <div class="productCard">
+    <br>
+    <img src="Images/red jacket.jpeg" alt="redjacket" id="imjs" class="product">
+    
+    <div class="colorCircle">
+      <div class="circle1" onclick="productchanger('circle1')"></div>
+      <div class="circle2" onclick="productchanger('circle2')"></div>
+      <div class="circle3" onclick="productchanger('circle3')"></div>
+    </div>
+
+  </div>
+
+
+  <div class="productCard">
+    <br>
+    <img src="Images/Redtshirt.jpeg" alt="redjacket" id="imjs2" class="product">
+    
+    <div class="colorCircle">
+      <div class="circle1" onclick="productchanger('red')"></div>
+      <div class="circle2" onclick="productchanger('blue')"></div>
+      <div class="circle3" onclick="productchanger('black')"></div>
+    </div>
+
+  </div>
+</div>
+
+
+<br><br><br>
+
+<footer class="name">
+  <a href="#">FAQ</a>
+  <a href="#">Contact Us</a>
+  <a href="#">Follow Us</a>
+  <a href="#">Terms of Use</a>
+  <a href="#">Privacy Policy</a>
+  <a href="#">Refund Policy</a>
+  <a href="#">&copy; 2021 | Promotion Pay</a>
+</footer>
+
+
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+
+
+
+    var images = [
+            'Images/slideimage1.jpg',
+            'Images/slideimage2.jpg',
+            'Images/slideimage4.jpg',
+            'Images/slideimage5.jpg',
+        ];
+
+        var myVar = setInterval(next, 5000);
+
+        var num = 0;
+        function next() {
+            var slider = document.getElementById('slider');
+            num++;
+            if (num >= images.length) {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+        function prev() {
+            var slider = document.getElementById('slider');
+            num--;
+            if (num < 0) {
+                num = images.length - 1;
+            }
+            slider.src = images[num];
+        }
+
+
+      const productchanger=(a)=>{
+          var x=document.getElementById("imjs");
+          var y=document.getElementById("imjs2");
+
+         if (a=='circle2') {
+          x.src="Images/Blue.jpeg";
+         } 
+         else if(a=='circle3') {
+          x.src="Images/Black Jacket.jpeg";
+         }
+         else if(a=='red')
+         {
+            y.src="Images/Redtshirt.jpeg";
+         }
+         else if(a=="blue")
+         {
+          y.src="Images/Bluetshirt.jpeg";
+         }
+         else if(a=="black")
+         {
+          y.src="Images/BlackTshirt.jpeg";
+         }
+         else
+         {
+          x.src="Images/red jacket.jpeg";
+         }
+          
+      }  
+
+
+      const ToqueChanger=(a)=>{
+        var x=document.getElementById("imjs1");
+        if(a=='BrownToque')
+         {
+           x.src="Images/BrownToque.jpeg";
+         }
+         else if(a=="BlackToque")
+         {
+           x.src="Images/Black.jpeg";
+         }
+         else
+         {
+           x.src="Images/BlueToque.jpeg";
+         }
+      }
+  </script>
+
+  </body>
+</html>
