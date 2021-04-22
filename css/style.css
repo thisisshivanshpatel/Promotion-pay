@@ -376,3 +376,12 @@ i
   font-weight: bolder;
   color: #fff;
 }
+
+
+@media(max-width:750px)
+{
+.name
+{
+  font-size:5px;
+}
+}
